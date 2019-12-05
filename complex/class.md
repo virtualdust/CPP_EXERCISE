@@ -1,5 +1,5 @@
 定义class的几个准则：
-1.数据权限private;
+1.数据权限使用private;
 2.pass value by reference; 
 3.return value by reference;
 4.默认构造函数使用初始化列表写法；
