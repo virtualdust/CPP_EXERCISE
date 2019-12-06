@@ -24,7 +24,7 @@ class complex{
 	private:
 		double re, im;
 
-	friend complex& __doapl(complex*, const complex&);
+		friend complex& __doapl(complex*, const complex&);
 };
 
 
