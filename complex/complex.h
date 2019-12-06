@@ -7,6 +7,10 @@
 
 #ifndef __COMPLEX__
 #define __COMPLEX__
+
+#include<iostream>
+using namespace std;
+
 class complex{
 	public:
 		complex(double r = 0, double i = 0)
@@ -36,5 +40,16 @@ complex::operator += (const complex& t){
 	return __doapl(this, t);
 }
 
+ostream& 
+operator << (ostream& os, const complex& x){
+	return os << "real:" << x.real() 
+		<< " image:" << x.imag() << endl;
+}
+
+bool 
+operator == (const complex& c1, const complex& c2) {
+	return c1.real() == c2.real() 
+		&& c1.imag() == c2.imag();
+}
 
 #endif

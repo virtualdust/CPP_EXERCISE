@@ -1,5 +1,5 @@
-main: main.cc
-	g++ -o main main.cc\
+complex-test: complex-test.cpp
+	g++ -o complex-test complex-test.cpp\
 
 clean:
-	rm -f main\
+	rm -f complex-test\
