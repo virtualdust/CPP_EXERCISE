@@ -28,7 +28,7 @@ inline Circle::Circle(float r)
 inline Circle::~Circle(){}
 
 inline float Circle::GetArea() const {
-	return radius * PI;
+	return radius * radius * PI;
 }
 
 #endif
