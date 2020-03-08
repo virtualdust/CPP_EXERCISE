@@ -14,7 +14,7 @@ using namespace std;
 int main(){
 	Shape* retangle = new Retangle(3,2);
 	std::cout << "Retangle's Area is "<< retangle->GetArea() << std::endl;
-	Shape * circle = new Circle(3);
+	Shape* circle = new Circle(3);
 	std::cout << "Circle's Area is " << circle->GetArea() << std::endl;
 	return 0;
 }

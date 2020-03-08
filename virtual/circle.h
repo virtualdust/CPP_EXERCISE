@@ -11,7 +11,7 @@
 #include "shape.h"
 using namespace std;
 
-const float PI = 3.14;
+#define PI 3.14
 
 class Circle : public Shape {
 	private:
