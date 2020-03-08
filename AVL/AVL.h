@@ -48,16 +48,22 @@ inline TreeNode* TreeNode::GetRight() const{
 
 inline void LeftRoateTree(TreeNode* root) {
 	TreeNode* tmp = root;
-	root = root->right;
-	tmp->left = root->right;
+	root = NULL;
+	root = tmp->right;
+	tmp->right = NULL;
+	tmp->right = root->left;
+	root->left = NULL;
 	root->left = tmp;
 	return;
 }
 
 inline void RightRoateTree(TreeNode* root) {
 	TreeNode* tmp = root;
-	root = root->left;
-	tmp->right = root->left;
+	root = NULL;
+	root = tmp->left;
+	tmp->left = NULL;
+	tmp->left = root->right;
+	root->right = NULL;
 	root->right = tmp;
 	return;
 }
@@ -130,6 +136,7 @@ TreeNode* BuildAVLTree(int* list, int size) {
 		root = InsertNode(root, node);
 		list++;
 	}
+
 	return root;
 }
 

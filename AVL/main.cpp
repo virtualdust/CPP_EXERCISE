@@ -11,7 +11,7 @@ using namespace std;
 
 
 int main(){
-	int list[] = {3,5,1,2,7,4,0,8,9};
+	int list[] = {3,5,1,2,7,4,0,8,9,11,10};
 	int length = sizeof(list)/sizeof(int);
 	TreeNode* root = BuildAVLTree(list, length);
 	root->ScanAVLTree();
