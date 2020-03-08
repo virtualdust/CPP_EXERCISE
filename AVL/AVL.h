@@ -100,7 +100,6 @@ void BalanceTree(TreeNode* root) {
 inline TreeNode* InsertNode(TreeNode* root, TreeNode* node){
 	if (root == NULL) {
 		root = node;
-		BalanceTree(root);
 		return root;
 	}
 
@@ -109,6 +108,8 @@ inline TreeNode* InsertNode(TreeNode* root, TreeNode* node){
 	} else {
 		root->right = InsertNode(root->right, node);
 	}
+
+	BalanceTree(root);
 
 	return root;
 }
@@ -121,9 +122,9 @@ inline void TreeNode::ScanAVLTree() const {
 }
 
 
-TreeNode* BuildAVLTree(int* list) {
+TreeNode* BuildAVLTree(int* list, int size) {
 	TreeNode* root = NULL;
-	for (int i = 0; i < sizeof(list); i++)
+	for (int i = 0; i < size; i++)
 	{
 		TreeNode* node = new TreeNode(*list, NULL, NULL);
 		root = InsertNode(root, node);

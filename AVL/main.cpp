@@ -11,8 +11,9 @@ using namespace std;
 
 
 int main(){
-	int list[8] = {3,5,1,2,7,8,4,0};
-	TreeNode* root = BuildAVLTree(list);
+	int list[] = {3,5,1,2,7,4,0,8,9};
+	int length = sizeof(list)/sizeof(int);
+	TreeNode* root = BuildAVLTree(list, length);
 	root->ScanAVLTree();
 	cout << "Depth:" << GetDepth(root) << endl;
 	cout << "LeftDepth:" << GetLeftDepth(root) << endl;
