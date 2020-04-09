@@ -10,7 +10,7 @@ class Node {
 				Node*		next;
 				Node*		selfNext;
 		public:
-				Node(int value_t = 0; Node* next_t = NULL, Node* selfNext_t = NULL) 
+				Node(int value_t = 0, Node* next_t = NULL, Node* selfNext_t = NULL) 
 				: value(value_t), next(next_t), selfNext(selfNext_t) {}
 
 				~Node() {}
