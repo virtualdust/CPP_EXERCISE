@@ -17,16 +17,16 @@ class Node {
 
 				int getValue() const { return value; }
 
-				Node& getNext() const { return *next; }
+				Node& getNext() { return *next; }
 
-				Node& getSelfNext() const { return *selfNext; }
+				Node& getSelfNext() { return *selfNext; }
 
 				void setValue(const int value_t) { value = value_t; }
 
 				void setNext(const Node& nextNode) { next = &nextNode; }
 
 				void setSelfNext(const Node& selfNextNode) { selfNext = &selfNextNode; }
-}
+};
 
 class SkipList {
 		private:
@@ -35,7 +35,7 @@ class SkipList {
 		public:
 				SkipList(Node* head_t = NULL) : head(head_t) {}
 				~SkipList() {}
-				Node& getHead() const { return *head; }
+				Node& getHead() { return *head; }
 				bool find(const int value); 
 				void insert(Node& node);
 				bool del(const int value);
