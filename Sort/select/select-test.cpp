@@ -14,7 +14,7 @@ int main(){
 	int size = sizeof(list)/sizeof(int);
 	selectSort(list, size);
 	for (int i = 0; i < size; i++) {
-		printf("%d\n", list[i]);
+		cout << list[i] << endl;
 	}
 	return 0;
 }
