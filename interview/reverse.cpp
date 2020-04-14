@@ -4,7 +4,7 @@
 #include<assert.h>
 using namespace std;
 
-void reverse(int* number) {
+void reverse(int& number) {
 		assert(number);
 
 		char* number_str = new char[1024];
@@ -23,7 +23,7 @@ void reverse(int* number) {
 				number[len - i - 1] = temp;
 		}
 
-		*number = atoi(number_str);
+		number = atoi(number_str);
 		cout << *number << endl;
 
 }
