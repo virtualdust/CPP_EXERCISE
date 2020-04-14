@@ -5,7 +5,7 @@
 using namespace std;
 
 void reverse(int* number) {
-		assert(number) return;
+		assert(number);
 
 		char* number_str = new char[1024];
 		itoa(number, number_str, 10);
