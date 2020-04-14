@@ -5,8 +5,6 @@
 using namespace std;
 
 void reverse(int& number) {
-		assert(number);
-
 		char* number_str = new char[1024];
 		itoa(number, number_str, 10);
 		int start = 0;
@@ -24,6 +22,12 @@ void reverse(int& number) {
 		}
 
 		number = atoi(number_str);
-		cout << *number << endl;
 
+}
+
+int main(){
+		int number = -233;
+		reverse(number);
+		cout << number << endl;
+		return 0;
 }
