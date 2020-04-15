@@ -12,14 +12,14 @@ void reverse(int& number) {
 	int len = strlen(number_str);
 
 	if (number < 0) {
-			start++;
-			len++;
+	     start++;
+	     len++;
 	}
 
 	for (int i = start; i < len/2; i++) {
-			char temp = number_str[i];
-			number_str[i] = number_str[len - i - 1];
-			number_str[len - i - 1] = temp;
+	    char temp = number_str[i];
+	    number_str[i] = number_str[len - i - 1];
+	    number_str[len - i - 1] = temp;
 	}
 
 	number = atoi(number_str);
@@ -27,8 +27,8 @@ void reverse(int& number) {
 }
 
 int main(){
-	int number = 233546;
-	reverse(number);
+    int number = 233546;
+    reverse(number);
 	cout << number << endl;
 	return 0;
 }
