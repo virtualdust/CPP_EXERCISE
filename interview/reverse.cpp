@@ -27,7 +27,7 @@ void reverse(int& number) {
 }
 
 int main(){
-    int number = 233546;
+    int number = 2335467 ;
     reverse(number);
     cout << number << endl;
     return 0;
