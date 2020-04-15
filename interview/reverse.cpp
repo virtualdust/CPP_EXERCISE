@@ -2,11 +2,12 @@
 #include<stdlib.h>
 #include<string>
 #include<assert.h>
+#include<stdio.h>
 using namespace std;
 
 void reverse(int& number) {
 		char* number_str = new char[1024];
-		itoa(number, number_str, 10);
+		sprintf(number_str,"%d", number);
 		int start = 0;
 		int len = strlen(number_str);
 
@@ -18,7 +19,7 @@ void reverse(int& number) {
 		for (int i = start; i < len/2; i++) {
 				char temp = number_str[i];
 				number_str[i] = number_str[len - i - 1];
-				number[len - i - 1] = temp;
+				number_str[len - i - 1] = temp;
 		}
 
 		number = atoi(number_str);
@@ -26,7 +27,7 @@ void reverse(int& number) {
 }
 
 int main(){
-		int number = -233;
+		int number = 233546;
 		reverse(number);
 		cout << number << endl;
 		return 0;
