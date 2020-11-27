@@ -1,5 +1,5 @@
 /*************************************************************************
-	> File Name: channel.c
+	> File Name: pipe.c
 	> Author: ylvis
 	> Mail: ylvis1024@gmail.com 
 	> Created Time: Fri Mar 13 01:06:33 2020
